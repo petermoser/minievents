@@ -1,0 +1,26 @@
+{
+  "name": "minievents",
+  "version": "0.0.1",
+  "description": "A basic and small EventEmitter like client and server side library",
+  "main": "minievents.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha ./test/minievents.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/petermoser/minievents"
+  },
+  "keywords": [
+    "events",
+    "eventemitter"
+  ],
+  "author": "Peter Moser",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/petermoser/minievents/issues"
+  },
+  "homepage": "https://github.com/petermoser/minievents"
+}
