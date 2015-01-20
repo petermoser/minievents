@@ -1,3 +1,4 @@
+debugger;
 var MiniEvents = require('../lib/minievents.js'),
     assert = require('assert');
 
@@ -66,5 +67,23 @@ describe('Testing the MiniEvents class', function() {
       }); 
       ee.emit('multipleArgs', 'arbitrary', 'number', 'of', 'arguments');
     });
+    it('can let other objects inherit from MiniEvents', function(done) {
+      function SimpleCounter() {
+        this.value = 0;
+      }
+      SimpleCounter.prototype.increment = function() {
+        return (++this.value);
+      };
+      // inherit MiniEmitter properties.
+      ee.mixin(SimpleCounter);
+      var userCounter = new SimpleCounter();
+      userCounter.on('newUser', function() {
+        var count = this.increment();
+        assert.ok( count === 1 );
+        done();
+      });
+      userCounter.emit('newUser');
+    });
+
   });
 });
