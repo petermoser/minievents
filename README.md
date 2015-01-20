@@ -7,10 +7,10 @@ MiniEvents is an abbreviated and small implementation of a Node-like EventEmmitt
 ```
 var ee = new MiniEvents();
 
-ee.on('say', function(ev, arg1, arg2, arg3) {
-  console.log(ev, arg1, arg2, arg3);
-}
+ee.on('say', function(arg1, arg2, arg3) {
+  console.log(arg1, arg2, arg3);
+});
 
-ee.emit('say', 'how', 'are', 'you');
+ee.emit('say', 'how', 'are', 'you?');
 ```
 
