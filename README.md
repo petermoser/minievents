@@ -1,6 +1,6 @@
 # MiniEvents
 
-MiniEvents is an abbreviated and small implementation of a Node-like EventEmmitter class.
+MiniEvents is a small implementation of a Node-like EventEmmitter class.
 
 ## Usage
 
